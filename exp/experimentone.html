@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Experiment One</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Story Telling Studies">
+    <meta name="Thomas Mildner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
+    <script type="text/javascript" src="../js/expOne.js"></script>
+    <!--loading jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="exp_one_content">
+
+
+    <div id="exp_one_start">
+        <p>To start the experiment press the <span style="color: #4CB227">green start button</span>. A section of the story will appear and prompt you to interact in a simple way. Please reply with a fitting answer. Once you are finished, please click on the appearing link.</p>
+        <button id="exp_one_start_button" type="button" onclick="startExperiment()">START</button>
+    </div>
+    <form id="exp_one_form">
+        <p id="exp_one_story_field"></p>
+        <div id="exp_one_name_input">
+            <p id="exp_one_section_alert"></p>
+            <p id="exp_one_story_field_warning">Please respond only after the utterance has finished.</p>
+            <div id="exp_one_respone_field">
+                <p>Type in a name here:</p>
+                <input type="text" id="exp_one_response_input" name="response" autocomplete="off"></br>
+            </div>
+            <button id="exp_one_response_button" type="button" onclick="onSubmit(this.id)">Reply</button>
+        </div>
+
+        <div id="story_section_buttons_container">
+            <div id="story_section_buttons">
+                <p id="story_section_warning">Please respond only after the utterance has finished.</p>
+                <button id="story_section_yes_button" type="button" onclick="onSubmit(this.id)">Yes</button>
+                <button id="story_section_no_button" type="button" onclick="onSubmit(this.id)">No</button>
+            </div>
+        </div>
+        <div id="exp_one_continue_container">
+            <button id="exp_one_continue_button" type="button" onclick="onSubmit(this.id)">Continue</button>
+        </div>
+
+        <div id="end_of_story_container">
+            <a id="end_of_story_button"  href="https://forms.gle/RUHSQSXq66U6eLoa6" target="_blank"><span>Move On</span></a>
+        </div>
+    </form>
+</div>
+
+<div class="back-button" id="exp_one_back_button">
+    <a href="../index.html"><img src="../img/arrow.svg">BACK</a>
+</div>
+
+</body>
+<script>
+    function enterResponse() {
+        document.getElementById("exp_one_response_button").click();
+    }
+
+    $("#exp_one_form").submit(function() {
+        enterResponse($("#test_response").get(0));
+        return false;
+    });
+    $(window).bind('beforeunload', function(){
+        return 'Are you sure you want to leave?';
+    });
+</script>
+</html>

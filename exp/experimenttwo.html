@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Experiment Two</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Story Telling Studies">
+    <meta name="Thomas Mildner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
+    <script type="text/javascript" src="../js/expOne.js"></script>
+    <!--loading jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="content experiment-content">
+    <p>In this experiment, simply listen to the story. </br> Please make sure your browser has JavaScript activated. Once you are finished, please click on the appearing link.</p>
+    <a id="two-play-button" tabindex="1" onclick="simpleNarration()">
+        <svg version="1.1" id="svg-play-button" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+             viewBox="0 0 343.86 343.6" style="enable-background:new 0 0 343.86 343.6;" xml:space="preserve">
+        <path class="st0" d="M171.93,9.38C82.16,9.38,9.39,82.15,9.39,171.92s72.77,162.54,162.54,162.54s162.54-72.77,162.54-162.54
+	        S261.69,9.38,171.93,9.38z M262.35,179.48l-124.94,72.13c-5.82,3.36-13.1-0.84-13.1-7.57V99.79c0-6.73,7.28-10.93,13.1-7.57
+	        l124.94,72.13C268.17,167.72,268.17,176.12,262.35,179.48z"></path>
+        </svg>
+        Start Experiment
+    </a>
+
+    <p id="experiment-two-finish-text"></p>
+    <a id="experiment_two_ending_button" href="https://forms.gle/4wgjknL4jmzjVKoG8" target="_blank"><span>Move On</span></a>
+</div>
+
+
+<div class="back-button" id="exp_two_back_button">
+    <a href="../index.html"><img src="../img/arrow.svg">BACK</a>
+</div>
+
+</body>
+
+<script>
+    $(window).bind('beforeunload', function(){
+        return 'Are you sure you want to leave?';
+    });
+</script>
+
+</html>
